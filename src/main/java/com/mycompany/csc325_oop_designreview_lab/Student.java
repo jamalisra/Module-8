@@ -8,12 +8,45 @@ package com.mycompany.csc325_oop_designreview_lab;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Human
+public class Student extends Human {
+    private double GPA;
 
-	// ToDo 2: Fix the resulting errors
+    // Constructor for creating a student object with name and age.
+    public Student(String name, short age) {
+        super(name, age);
+    }
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    public Student(String name, short age, double GPA) {
+        super(name, age);
+        this.GPA = GPA;
+    }
+
+    // Getter method for retrieving the students GPA
+    public double getGPA() {
+        return GPA;
+    }
+
+    // Setter method for setting the students GPA
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public void setAddress(String address) {
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", GPA=" + GPA +
+                '}';
+    }
 }
+
